@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_small_flask"
+      "has_small_flask",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "potionflasks:medium_flask"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

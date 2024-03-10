@@ -9,13 +9,15 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
+import java.util.function.Consumer;
+
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput pRecipeOutput) {
+    protected void buildRecipes(Consumer<FinishedRecipe> pRecipeOutput) {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SMALL_FLASK.get())
                 .pattern("B B")
                 .pattern("SAS")
@@ -48,6 +50,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.LEATHER, 2)
                 .requires(ModItems.HOGLIN_LEATHER.get())
                 .unlockedBy(getHasName(ModItems.HOGLIN_LEATHER.get()), has(ModItems.HOGLIN_LEATHER.get()))
-                .save(pRecipeOutput);
+                .save(pRecipeOutput, "leather_from_hoglin_leather");
     }
 }

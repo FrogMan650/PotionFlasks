@@ -19,5 +19,6 @@
   ],
   "result": {
     "item": "potionflasks:small_flask"
-  }
+  },
+  "show_notification": true
 }

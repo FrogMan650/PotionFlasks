@@ -1,9 +1,9 @@
-// 1.20.4	2024-03-10T00:20:47.88137	Recipes
-aac97e134a0029a320275434f7d1caf9f76abfa9 data/minecraft/advancements/recipes/misc/leather.json
-2001043c87ef6ec23dc7db7a244dd0f0fc17429f data/minecraft/recipes/leather.json
-31bc8da44dba9e7de1c426015f0b633ca2bcebf2 data/potionflasks/advancements/recipes/misc/large_flask.json
-02d34dce6f06b8869f59265c933ef6d4cf7b4799 data/potionflasks/advancements/recipes/misc/medium_flask.json
-57c2b31194cf2ef2f73f1f41f3d811b84710b91f data/potionflasks/advancements/recipes/misc/small_flask.json
-ed74548799b3bae9509c845e65dd4a693d272abf data/potionflasks/recipes/large_flask.json
-63469ed77d4c3055ef133d600068f8d1d09aa4f6 data/potionflasks/recipes/medium_flask.json
-fbc559d91b345d52451e5115ee4c176bbdbf4ff5 data/potionflasks/recipes/small_flask.json
+// 1.20.1	2024-03-10T10:59:38.8316461	Recipes
+225ae3f7bbcbf30d3fd5741001668b27c4b0ad5c data/minecraft/advancements/recipes/misc/leather_from_hoglin_leather.json
+2001043c87ef6ec23dc7db7a244dd0f0fc17429f data/minecraft/recipes/leather_from_hoglin_leather.json
+30cad1570e365311ce2c5557800619aacd4549c5 data/potionflasks/advancements/recipes/misc/large_flask.json
+b948665e5b1808d17e48a65b9b392a6e7bac8fc6 data/potionflasks/advancements/recipes/misc/medium_flask.json
+5600cfb626b21d9a453cae24dacec7dd10393ee3 data/potionflasks/advancements/recipes/misc/small_flask.json
+805b6540b879c616d20d5b6bae0ed911c14b2b4c data/potionflasks/recipes/large_flask.json
+2ca0e4464bccecd62cec33b4242a1bfbe1f9e7cb data/potionflasks/recipes/medium_flask.json
+d769bb2e892fa427ac38756fe9762db3384e22f3 data/potionflasks/recipes/small_flask.json

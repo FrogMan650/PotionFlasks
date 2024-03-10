@@ -22,5 +22,6 @@
   ],
   "result": {
     "item": "potionflasks:large_flask"
-  }
+  },
+  "show_notification": true
 }

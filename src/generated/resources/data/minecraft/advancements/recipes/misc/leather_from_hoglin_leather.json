@@ -15,20 +15,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:leather"
+        "recipe": "minecraft:leather_from_hoglin_leather"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_hoglin_leather"
+      "has_hoglin_leather",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:leather"
+      "minecraft:leather_from_hoglin_leather"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

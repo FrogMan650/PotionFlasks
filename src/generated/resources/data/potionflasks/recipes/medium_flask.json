@@ -22,5 +22,6 @@
   ],
   "result": {
     "item": "potionflasks:medium_flask"
-  }
+  },
+  "show_notification": true
 }
