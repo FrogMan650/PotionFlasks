@@ -14,6 +14,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -56,8 +57,14 @@ public class MediumFlaskPotionItem extends PotionItem {
         } else return ItemUtils.startUsingInstantly(level, player, pHand);
     }
 
-    public @NotNull ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pEntityLiving) {
+    public ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pEntityLiving) {
+        InteractionHand pHand;
         Player player = pEntityLiving instanceof Player ? (Player)pEntityLiving : null;
+        if (player.getItemInHand(InteractionHand.MAIN_HAND) == pStack) {
+            pHand = InteractionHand.MAIN_HAND;
+        } else {
+            pHand = InteractionHand.OFF_HAND;
+        }
         if (player instanceof ServerPlayer) {
             CriteriaTriggers.CONSUME_ITEM.trigger((ServerPlayer)player, pStack);
         }
@@ -84,6 +91,11 @@ public class MediumFlaskPotionItem extends PotionItem {
 
         if (player == null || !player.getAbilities().instabuild) {
             if (pStack.isEmpty()) {
+                if (pHand == InteractionHand.MAIN_HAND) {
+                    player.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ModItems.MEDIUM_FLASK.get()));
+                } else {
+                    player.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(ModItems.MEDIUM_FLASK.get()));
+                }
                 return new ItemStack(ModItems.MEDIUM_FLASK.get());
             }
         }
@@ -93,16 +105,24 @@ public class MediumFlaskPotionItem extends PotionItem {
     }
 
     @Override
-    public @NotNull InteractionResult useOn(UseOnContext pContext) {
+    public InteractionResult useOn(UseOnContext pContext) {
         //empty the flask by using it on a water cauldron (works with any water level)
+        InteractionHand pHand;
         Level level = pContext.getLevel();
         Player player = pContext.getPlayer();
         ItemStack itemStack = pContext.getItemInHand();
+        if (player.getItemInHand(InteractionHand.MAIN_HAND) == itemStack) {
+            pHand = InteractionHand.MAIN_HAND;
+        } else {
+            pHand = InteractionHand.OFF_HAND;
+        }
         Block blockClicked = level.getBlockState(pContext.getClickedPos()).getBlock();
-        int itemSlot = player.getInventory().findSlotMatchingItem(itemStack);
         if (blockClicked == Blocks.WATER_CAULDRON) {
-            player.getInventory().removeItem(itemStack);
-            player.getInventory().add(itemSlot, ModItems.MEDIUM_FLASK.get().getDefaultInstance());
+            if (pHand == InteractionHand.MAIN_HAND) {
+                player.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ModItems.MEDIUM_FLASK.get()));
+            } else {
+                player.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(ModItems.MEDIUM_FLASK.get()));
+            }
             level.playSound((Player)null, pContext.getClickedPos(), SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
             return InteractionResult.sidedSuccess(level.isClientSide);
         } else return InteractionResult.PASS;
