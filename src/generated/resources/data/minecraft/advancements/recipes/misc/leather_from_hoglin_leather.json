@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:leather"
+        "recipe": "minecraft:leather_from_hoglin_leather"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:leather"
+      "minecraft:leather_from_hoglin_leather"
     ]
   }
 }

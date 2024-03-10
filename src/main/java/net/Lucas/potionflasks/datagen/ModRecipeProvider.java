@@ -48,6 +48,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.LEATHER, 2)
                 .requires(ModItems.HOGLIN_LEATHER.get())
                 .unlockedBy(getHasName(ModItems.HOGLIN_LEATHER.get()), has(ModItems.HOGLIN_LEATHER.get()))
-                .save(pRecipeOutput);
+                .save(pRecipeOutput, "leather_from_hoglin_leather");
     }
 }
