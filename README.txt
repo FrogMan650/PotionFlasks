@@ -1,1 +1,1 @@
-A simple mod that adds the ability to craft Diamond and Netherite Chestplates into variants that have Elytra Flight.
+A simple mod that adds three new craftable Potion Flasks. Potion Flasks hold multiple doses of the same potion.
