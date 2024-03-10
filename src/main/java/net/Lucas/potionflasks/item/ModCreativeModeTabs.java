@@ -15,8 +15,8 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PotionFlasks.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> FLASK_TAB = CREATIVE_MODE_TABS.register("flask_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.ELYTRA))
-                    .title(Component.translatable("creativetab.elytrachestplates.flask_tab"))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SMALL_FLASK.get()))
+                    .title(Component.translatable("creativetab.potionflasks.flask_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.SMALL_FLASK.get());
                         pOutput.accept(ModItems.SMALL_FLASK_POTION.get());

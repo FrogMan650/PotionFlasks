@@ -127,7 +127,7 @@ public class LargeFlaskPotionItem extends PotionItem {
         }
 
         Component flask_doses_remaining = Component.translatable(Util.makeDescriptionId("tooltip", new ResourceLocation
-                ("endgameenhanced:generic.flask.doses_remaining"))).withStyle(GREY_TEXT);
+                ("potionflasks:generic.flask.doses_remaining"))).withStyle(GREY_TEXT);
         pTooltipComponents.add(flask_doses_remaining);
 
         Component totem_current_charges = Component.literal(" "+remainingCharges+" / "+maxCharges).withStyle(VARIABLE_TEXT);
