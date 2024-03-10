@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "potionflasks:small_flask"
+    },
+    "B": {
+      "item": "minecraft:string"
+    },
+    "D": {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    "S": {
+      "item": "minecraft:leather"
+    }
+  },
+  "pattern": [
+    "BDB",
+    "SAS",
+    " S "
+  ],
+  "result": {
+    "item": "potionflasks:medium_flask"
+  }
+}

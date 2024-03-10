@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:experience_bottle"
+    },
+    "B": {
+      "item": "minecraft:string"
+    },
+    "S": {
+      "item": "minecraft:rabbit_hide"
+    }
+  },
+  "pattern": [
+    "B B",
+    "SAS",
+    " S "
+  ],
+  "result": {
+    "item": "potionflasks:small_flask"
+  }
+}

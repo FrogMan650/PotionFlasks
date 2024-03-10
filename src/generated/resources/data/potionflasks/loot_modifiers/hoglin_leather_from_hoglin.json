@@ -1,0 +1,10 @@
+{
+  "type": "potionflasks:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/hoglin"
+    }
+  ],
+  "item": "potionflasks:hoglin_leather"
+}

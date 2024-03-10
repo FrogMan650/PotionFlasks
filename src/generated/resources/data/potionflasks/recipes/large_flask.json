@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "potionflasks:medium_flask"
+    },
+    "B": {
+      "item": "minecraft:string"
+    },
+    "D": {
+      "item": "minecraft:nether_star"
+    },
+    "S": {
+      "item": "potionflasks:hoglin_leather"
+    }
+  },
+  "pattern": [
+    "BDB",
+    "SAS",
+    " S "
+  ],
+  "result": {
+    "item": "potionflasks:large_flask"
+  }
+}
